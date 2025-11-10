@@ -1,0 +1,109 @@
+:root{
+  --fondo:#fbfdff;
+  --tarjeta:#ffffff;
+  --atenuado:#6b7280;
+  --texto:#0f172a;
+  --acento:#0f62fe;
+  --acento-2:#7c3aed;
+  --vidrio: rgba(255,255,255,0.6);
+  --max-ancho:1200px;
+  --espacio:1rem;
+  --radio:12px;
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --sombra: 0 6px 18px rgba(15,23,42,0.08);
+}
+
+*{box-sizing:border-box}
+html,body{altura:100%}
+body{
+  margin:0;
+  background:linear-gradient(180deg,#f7fbff 0%,var(--fondo) 100%);
+  color:var(--texto);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+  font-size:16px;
+}
+
+.contenedor{max-width:var(--max-ancho);margin:0 auto;padding:1rem}
+
+.encabezado-sitio{
+  position:sticky;top:0;background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);border-bottom:1px solid #eef2f7;z-index:40;
+}
+.encabezado-interno{display:flex;align-items:center;justify-content:space-between;gap:.75rem}
+.marca{font-weight:700;font-size:1.1rem;color:var(--texto);text-decoration:none}
+.navegacion a{margin-left:1rem;text-decoration:none;color:var(--texto);font-weight:500}
+.navegacion .boton{margin-left:1rem}
+
+.boton{
+  display:inline-block;padding:.55rem .9rem;border-radius:10px;border:1px solid transparent;text-decoration:none;font-weight:600;
+}
+.boton.primario{background:linear-gradient(90deg,var(--acento),var(--acento-2));color:#fff;box-shadow:var(--sombra)}
+.boton.fantasma{background:transparent;border:1px solid rgba(15,23,42,0.06);color:var(--texto)}
+
+.hero{padding:2rem 0}
+.cuadricula-hero{display:grid;grid-template-columns:1fr;gap:1rem;align-items:center}
+.texto-hero h1{font-size:1.6rem;margin:0 0 .5rem}
+.texto-hero p{color:var(--atenuado);margin:0 0 1rem}
+.vista-previa-hero .tarjeta-previa{max-width:420px;margin:0 auto}
+
+.tarjeta{background:var(--tarjeta);border-radius:var(--radio);box-shadow:var(--sombra);overflow:hidden}
+.media-tarjeta{height:160px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#eef2ff,#fff);color:var(--atenuado);font-weight:600}
+.cuerpo-tarjeta{padding:1rem}
+.titulo-tarjeta{margin:0;font-size:1.05rem}
+.marcador, .marcador-lg, .marcador-xl{display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(45deg,#f3f6ff,#f3f6ff 10px,#ffffff 10px,#ffffff 20px);color:var(--atenuado);height:100%}
+.marcador-lg{height:200px}
+.marcador-xl{height:320px}
+
+.caracteristicas{padding:.75rem 0}
+.titulo-seccion{font-size:1.25rem;margin-bottom:.75rem}
+.cuadricula{display:grid}
+.cols-3{grid-template-columns:repeat(3,1fr)}
+.cols-2{grid-template-columns:repeat(2,1fr)}
+.cols-sm-1{grid-template-columns:1fr}
+.espacio-1{gap:1rem}
+
+.proyectos .tarjeta{height:100%}
+.tarjeta-proyecto .media-tarjeta{height:140px}
+.meta-proyecto{padding:.6rem .9rem;border-top:1px solid #f3f5f9;color:var(--atenuado);font-size:.9rem}
+
+.pagina-formulario{padding:2rem 0;display:flex;align-items:center;justify-content:center}
+.tarjeta-formulario{max-width:560px;padding:1.25rem}
+.tarjeta-formulario h1{margin:0 0 .25rem}
+.tarjeta-formulario label{display:block;margin:0.6rem 0;font-weight:600}
+.tarjeta-formulario input, .tarjeta-formulario select, .tarjeta-formulario textarea{
+  width:100%;padding:.6rem;border-radius:8px;border:1px solid #e6eef8;background:transparent;font-size:1rem;margin-top:.25rem;
+}
+.tarjeta-formulario .atenuado{color:var(--atenuado);margin-bottom:.5rem}
+
+.fila{display:flex;gap:1rem;align-items:center}
+.espacio-entre{justify-content:space-between}
+.centrar{text-align:center}
+.mt-1{margin-top:1rem}
+.espacio{gap:1rem}
+
+.pie-sitio{padding:1rem 0;border-top:1px solid #eef2f7;background:transparent}
+.cuadricula-pie{display:flex;justify-content:space-between;align-items:center}
+
+.cuadricula-detalle{display:grid;grid-template-columns:1fr;gap:1rem}
+.media-detalle{order:1}
+.info-detalle{order:2}
+
+@media (min-width:720px){
+  .cuadricula-hero{grid-template-columns:1fr 420px}
+  .cuadricula.cols-3{grid-template-columns:repeat(3,1fr)}
+  .cuadricula-detalle{grid-template-columns:2fr 1fr}
+  .alternar-navegacion{display:none}
+  .navegacion{display:flex;align-items:center}
+}
+@media (min-width:1024px){
+  .texto-hero h1{font-size:2rem}
+  .contenedor{padding:2rem}
+  .media-tarjeta{height:220px}
+}
+@media (max-width:719px){
+  .navegacion{display:none}
+  .alternar-navegacion{display:block;background:transparent;border:none;font-size:1.25rem}
+  .encabezado-interno{padding:.5rem 0}
+  .cols-3{grid-template-columns:1fr}
+}

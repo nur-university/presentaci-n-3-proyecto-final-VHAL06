@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="ValidFound - Registro de usuarios" />
+  <title>ValidFound - Registrarse</title>
+  <link rel="canonical" href="https://VHAL06.github.io/presentaci-n-3-proyecto-final-VHAL06/"/>
+  <meta name="author" content="Victor Alba" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../recursos/estilos.css">
+</head>
+<body>
+  <header class="encabezado-sitio">
+    <div class="contenedor encabezado-interno">
+      <a class="marca" href="index.html">ValidFound</a>
+      <nav class="navegacion" aria-label="Navegación principal">
+        <a href="explorar.html">Explorar</a>
+        <a href="login.html">Entrar</a>
+      </nav>
+      <button class="alternar-navegacion" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <main class="contenedor pagina-formulario">
+    <div class="tarjeta tarjeta-formulario">
+      <h1>Crear cuenta</h1>
+      <p class="atenuado">Regístrate para publicar proyectos y contribuir a otros.</p>
+
+      <form id="formularioRegistro" data-validar>
+        <label>Nombre completo
+          <input name="nombre" type="text" required placeholder="Tu nombre completo"/>
+        </label>
+
+        <label>Email
+          <input name="email" type="email" required placeholder="ejemplo@dominio.com"/>
+        </label>
+
+        <label>Contraseña
+          <input name="contrasena" type="password" minlength="6" required placeholder="Mínimo 6 caracteres"/>
+        </label>
+
+        <label>Confirmar contraseña
+          <input name="contrasena2" type="password" minlength="6" required placeholder="Repite la contraseña"/>
+        </label>
+
+        <div class="mt-1">
+          <button class="boton primario" type="submit">Registrarse</button>
+          <a class="boton fantasma" href="login.html">Ya tengo cuenta</a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="pie-sitio">
+    <div class="contenedor cuadricula-pie">
+      <div><strong>ValidFound</strong><p class="atenuado">Registro de usuario</p></div>
+      <div><p class="atenuado">© <span id="anio4"></span> Victor Alba</p></div>
+    </div>
+  </footer>
+
+  <script src="../recursos/script.js"></script>
+</body>
+</html>
