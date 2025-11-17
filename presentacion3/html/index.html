@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="ValidFound - Plataforma de crowdfunding para proyectos de código abierto" />
+  <title>ValidFound - Inicio</title>
+  <link rel="canonical" href="https://VHAL06.github.io/presentaci-n-3-proyecto-final-VHAL06/"/>
+  <meta name="author" content="Victor Alba" />
+  <meta name="theme-color" content="#0d6efd" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../recursos/estilos.css">
+</head>
+<body>
+  <header class="encabezado-sitio">
+    <div class="contenedor encabezado-interno">
+      <a class="marca" href="index.html">ValidFound</a>
+      <nav class="navegacion" aria-label="Navegación principal">
+        <a href="explorar.html">Explorar</a>
+        <a href="detalle-proyecto.html">Ejemplo</a>
+        <a href="login.html">Entrar</a>
+        <a class="boton primario" href="registro.html">Registrarse</a>
+      </nav>
+      <button class="alternar-navegacion" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <main id="principal">
+    <section class="hero">
+      <div class="contenedor cuadricula-hero">
+        <div class="texto-hero">
+          <h1>Financia el futuro del código abierto</h1>
+          <p>ValidFound es la plataforma donde desarrolladores como tú financian y construyen las herramientas open-source del mañana.</p>
+          <div class="llamadas-hero">
+            <a class="boton primario" href="explorar.html">Explorar proyectos</a>
+            <a class="boton fantasma" href="registro.html">Crear cuenta</a>
+          </div>
+        </div>
+        <div class="vista-previa-hero">
+          <div class="tarjeta tarjeta-previa">
+            <div class="media-tarjeta marcador-lg">DB-SIMPLIFIER JS LIB</div>
+            <div class="cuerpo-tarjeta">
+              <h3 class="titulo-tarjeta">Proyecto destacado</h3>
+              <p class="atenuado">Librería que revoluciona las consultas a bases de datos.</p>
+              <div class="meta-proyecto">
+                <span>65% financiado</span>
+                <span>15 días restantes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="caracteristicas contenedor">
+      <h2 class="titulo-seccion">¿Por qué ValidFound?</h2>
+      <div class="cuadricula cols-3 cols-sm-1 espacio-1">
+        <div class="caracteristica">
+          <h3>Validación Técnica</h3>
+          <p>Cada proyecto pasa por revisión técnica antes de ser publicado.</p>
+        </div>
+        <div class="caracteristica">
+          <h3>Enfoque Especializado</h3>
+          <p>Exclusivo para proyectos de software y hardware open-source.</p>
+        </div>
+        <div class="caracteristica">
+          <h3>Comunidad Técnica</h3>
+          <p>Conecta con desarrolladores e inversores que entienden tu trabajo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="proyectos contenedor">
+      <h2 class="titulo-seccion">Proyectos en tendencia</h2>
+      <div id="lista-proyectos" class="cuadricula cols-3 cols-sm-1 espacio-1">
+      </div>
+      <div class="centrar mt-1">
+        <a class="boton primario" href="explorar.html">Ver todos los proyectos</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie-sitio">
+    <div class="contenedor cuadricula-pie">
+      <div>
+        <strong>ValidFound</strong>
+        <p class="atenuado">Plataforma de crowdfunding para código abierto</p>
+      </div>
+      <div>
+        <p class="atenuado">© <span id="anio"></span> Victor Alba</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../recursos/script.js"></script>
+</body>
+</html>
